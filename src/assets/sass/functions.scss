@@ -1,0 +1,7 @@
+/**
+ *  Get Color function
+ * 
+ **/
+@function getcolor ($key){
+    @return map_get($colors, $key);
+}

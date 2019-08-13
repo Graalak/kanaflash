@@ -1,0 +1,13 @@
+$colors: (
+    cascade: (#8AA6A5),
+    periglacial-blue: (#DCE3D6),
+    sugarcane: (#FBFFFB),
+    oxley: (#7A9E8C),
+    tangora: (#03103C)
+);
+
+$color-cascade: getcolor(cascade);
+$color-periglacial-blue: getcolor(periglacial-blue);
+$color-sugarcane: getcolor(sugarcane);
+$color-oxley: getcolor(oxley);
+$color-tangora: getcolor(tangora);
