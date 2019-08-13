@@ -4,8 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import * as firebase from 'firebase';
+import  { BrowserRouter as Router} from 'react-router-dom';
+import history from './services/history'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Router history={history}>
+        <App /> 
+    </Router>, document.getElementById('root'));
 const config = {
     apiKey: "AIzaSyA_9Jp98wwTpT3j_7a_1Kr2sgRE3NWDDaM",
     authDomain: "kanaflash-adcb1.firebaseapp.com",

@@ -1,20 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import  {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-
+import  {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 // Components and pages import part
 import Home from "./pages/Home/Home";
 import Hiragana from './pages/Hiragana/Hiragana';
 import Katakana from './pages/Katakana/Katakana';
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <Router>
-      <Route exact path="/" component={Home}/>
-      <Route path="/katakana" component={Katakana}/>
-      <Route path="/hiragana" component={Hiragana}/>
-    </Router>
+    [
+      <Header/>,
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/katakana" component={Katakana}/>
+        <Route path="/hiragana" component={Hiragana}/>
+      </Switch>
+    ]
   );
 }
 
