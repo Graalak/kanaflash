@@ -8,11 +8,12 @@ class Hiragana extends Component {
   constructor(props){
     super(props);
     this.randomHiragana = this.randomHiragana.bind(this);
-    this.state = { randomHiraganas: 0}
+    this.state = { randomHiraganas: null}
   }
   
-  randomHiragana(object) {
-    const max_number = Math.ceil(Object.keys(object).length);
+  randomHiragana() {
+    const max_number = Math.ceil(Object.keys(hiraganas).length);
+    console.log(max_number);
     const rand_key = Math.floor(Math.random() * (max_number));
     return this.setState({randomHiraganas: rand_key});
 
@@ -20,6 +21,7 @@ class Hiragana extends Component {
 
     render() {
       const {randomHiraganas} = this.state;
+      console.log(randomHiraganas)
       return(
           <section>
             {Object.values(hiraganas)[randomHiraganas]}
