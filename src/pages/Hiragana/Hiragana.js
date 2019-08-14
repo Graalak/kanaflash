@@ -1,7 +1,7 @@
 import React, {
     Component
 } from 'react';
-import { directive } from '@babel/types';
+import './Hiragana.scss';
 const hiraganas = require('../../assets/kana/hiragana.json');
 
 class Hiragana extends Component {
@@ -24,7 +24,7 @@ class Hiragana extends Component {
       console.log(randomHiraganas)
       return(
           <section>
-            {Object.values(hiraganas)[randomHiraganas]}
+            <p className="kana">{Object.values(hiraganas)[randomHiraganas]}</p>
             <button onClick={this.randomHiragana}>Refresh</button>
           </section>
         )
