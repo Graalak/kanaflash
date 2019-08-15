@@ -3,8 +3,7 @@ import './App.css';
 import  {Route, Switch} from 'react-router-dom';
 // Components and pages import part
 import Home from "./pages/Home/Home";
-import Hiragana from './pages/Hiragana/Hiragana';
-import Katakana from './pages/Katakana/Katakana';
+import Kana from './pages/Kana/Kana';
 import Header from './components/Header/Header';
 
 function App() {
@@ -13,8 +12,8 @@ function App() {
       <Header/>,
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/katakana" component={Katakana}/>
-        <Route path="/hiragana" component={Hiragana}/>
+        <Route path="/katakana" component={Kana}/>
+        <Route path="/hiragana" component={Kana}/>
       </Switch>
     ]
   );
