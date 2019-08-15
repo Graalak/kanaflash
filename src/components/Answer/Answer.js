@@ -11,8 +11,12 @@ class Answer extends Component {
     handleSubmit(e){
         const {kana_trad} = this.props;
         const {randomFunction} = this.props;
-        const form_data = new FormData(e.target); 
-        form_data.get("answer") === kana_trad ? randomFunction() : this.setState({input_classname: "false"});
+        const form_data = new FormData(e.target);
+        this.setState({input_classname: 'default'});
+        if(form_data.get("answer") === kana_trad || form_data.get("answer") === kana_trad.toUpperCase())
+            randomFunction()
+        else
+            this.setState({input_classname: "false"})
         e.target.reset();
         e.preventDefault();
     }
