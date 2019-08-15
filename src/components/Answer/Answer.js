@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Answer.scss';
-import { restElement } from '@babel/types';
+
 class Answer extends Component {
     constructor(props){
         super(props);
