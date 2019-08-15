@@ -24,8 +24,7 @@ class Hiragana extends Component {
       return(
           <section>
             <p className="kana">{Object.values(hiraganas)[randomHiraganas]}</p>
-            <Answer kana_trad={Object.keys(hiraganas)[randomHiraganas]}/>
-            <button onClick={this.randomHiragana}>Refresh</button>
+            <Answer kana_trad={Object.keys(hiraganas)[randomHiraganas]} randomFunction={this.randomHiragana}/>
           </section>
         )
     }
