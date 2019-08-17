@@ -9,16 +9,20 @@ class Answer extends Component {
     }
 
     handleSubmit(e){
+        e.preventDefault();
         const {kana_trad} = this.props;
-        const {randomFunction} = this.props;
+        const {randomKana} = this.props;
         const form_data = new FormData(e.target);
         this.setState({input_classname: 'default'});
-        if(form_data.get("answer") === kana_trad || form_data.get("answer") === kana_trad.toUpperCase())
-            randomFunction()
+
+        const regExp = new RegExp(`^${kana_trad}$`, 'i');
+
+        if(regExp.test(form_data.get('answer')))
+            randomKana()
         else
             this.setState({input_classname: "false"})
+
         e.target.reset();
-        e.preventDefault();
     }
 
     render(){
